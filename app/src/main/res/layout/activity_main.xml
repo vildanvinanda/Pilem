@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="20dp"
+        >
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/tamplatePPUser"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:cardCornerRadius="50dp"
+                >
+                <ImageView
+                    android:id="@+id/PPUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/black"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selamat Datang"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/tamplatePPUser"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="12dp"
+                />
+            <TextView
+                android:id="@+id/namaUser"
+                android:layout_below="@+id/welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vildan Vinanda"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/tamplatePPUser"
+                android:fontFamily="@font/poppinssemibold"
+                android:textSize="16dp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/header"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/txtMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="List Movie"
+                android:fontFamily="@font/poppinssemibold"
+                android:textSize="12dp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@+id/txtMovie"
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:clipToPadding="false"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:scrollbars="vertical"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout >
