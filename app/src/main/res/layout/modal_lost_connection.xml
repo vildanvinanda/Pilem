@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/no_internet_layout"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:background="@drawable/bgrounded_white"
+    >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="20dp"
+    >
+
+    <ImageView
+        android:id="@+id/gambar_lost"
+        android:layout_width="150dp"
+        android:layout_height="140dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_wifi_slash" />
+
+    <TextView
+        android:id="@+id/jdltxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gambar_lost"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="No Internet"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/des"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jdltxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Please check your internet connection and anda dan try again!"
+        android:textAlignment="center"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/btn_try"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/des"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btnrounded"
+        android:fontFamily="@font/poppinsregular"
+        android:gravity="center"
+        android:text="Try Again"
+        android:textColor="@color/white"
+        android:textSize="12dp" />
+
+
+
+
+</RelativeLayout>
+
+
+</RelativeLayout>
