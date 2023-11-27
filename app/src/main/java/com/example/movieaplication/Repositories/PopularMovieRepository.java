@@ -4,8 +4,11 @@ import androidx.lifecycle.LiveData;
 
 import com.example.movieaplication.Model.MovieModel;
 import com.example.movieaplication.Request.PopularMovieApiClient;
+import com.example.movieaplication.Response.PopularMovieResponses;
 
 import java.util.List;
+
+import retrofit2.Call;
 
 public class PopularMovieRepository {
     private static PopularMovieRepository instance;
@@ -21,12 +24,12 @@ public class PopularMovieRepository {
         return instance;
     }
 
-    private PopularMovieRepository(){
+    public PopularMovieRepository(){
         popularMovieApiClient = PopularMovieApiClient.getInstance();
     }
 
-    //nanati live data disini dikirim ke
     public LiveData<List<MovieModel>> getPopularMovie(){
+        //data ini juga ngambil dari API Client
         return popularMovieApiClient.getPopularMovie();
     }
     public void getPopularMovie (int page) {

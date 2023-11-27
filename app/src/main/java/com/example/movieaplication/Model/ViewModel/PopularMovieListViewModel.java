@@ -1,6 +1,8 @@
 package com.example.movieaplication.Model.ViewModel;
 
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.ViewModel;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.movieaplication.Model.MovieModel;
 import com.example.movieaplication.Repositories.PopularMovieRepository;
@@ -8,7 +10,8 @@ import com.example.movieaplication.Utils.MovieApi;
 
 import java.util.List;
 
-public class PopularMovieListViewModel {
+public class PopularMovieListViewModel extends ViewModel {
+
     private PopularMovieRepository poppularMovieRepository;
 
     public PopularMovieListViewModel (){
@@ -16,7 +19,9 @@ public class PopularMovieListViewModel {
 
     }
 
+    //ngabil dari sini
     public LiveData<List<MovieModel>> getPopularMovie(){
+        //data ini juga diambil dari repository
         return poppularMovieRepository.getPopularMovie();
     }
 

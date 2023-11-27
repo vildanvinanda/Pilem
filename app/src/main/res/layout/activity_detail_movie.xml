@@ -8,91 +8,133 @@
     tools:context=".Activity.DetailMovie"
     >
 
-    <androidx.cardview.widget.CardView
+    <RelativeLayout
         android:id="@+id/tamplatePoster"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:background="@drawable/gradasi"
-
+        android:layout_height="400dp"
         >
         <ImageView
             android:id="@+id/imgPoster"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/fotoutama"
-            />
+            android:background="@drawable/fotoutama" />
+
         <ImageView
+            android:id="@+id/btnback"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/ic_btnback"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
             />
-    </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
 
 
     <RelativeLayout
-        android:id="@+id/tamplateHeader"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="-40dp"
         android:layout_below="@+id/tamplatePoster"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/bgrounded"
         >
         <RelativeLayout
-            android:id="@+id/headerTitle"
-            android:layout_width="wrap_content"
+            android:id="@+id/tamplateHeader"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            >
+            <RelativeLayout
+                android:id="@+id/headerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/txtMovie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Captain Marvel"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textSize="18dp"
+                    />
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_toEndOf="@+id/txtMovie"
+                    android:layout_alignBottom="@+id/txtMovie"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2020"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textSize="12dp"
+                    />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/headerTitle"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <TextView
+                        android:layout_marginHorizontal="5dp"
+                        android:id="@+id/txtLanguage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="List Movie"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textSize="12dp"
+
+                        />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/ratingTextDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/headerTitle"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/poppinssemibold"
+                android:textColor="@color/material_blue"
+                android:textSize="14sp"
+                tools:text="8.5" />
+
+            <LinearLayout
+                android:id="@+id/starDetail"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="-10dp"
+                android:layout_below="@+id/headerTitle"
+                android:layout_toStartOf="@+id/ratingTextDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tamplateDeskripsi"
+            android:layout_below="@+id/tamplateHeader"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
             >
             <TextView
-                android:id="@+id/txtMovie"
+                android:id="@+id/txtDeskripsi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Captain Marvel"
-                android:fontFamily="@font/poppinsbold"
-                android:textSize="18dp"
-                />
-            <TextView
-                android:id="@+id/txtThn"
-                android:layout_toEndOf="@+id/txtMovie"
-                android:layout_alignBottom="@+id/txtMovie"
-                android:layout_marginLeft="5dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2020"
+                android:text="Loream"
                 android:fontFamily="@font/poppinsregular"
                 android:textSize="12dp"
                 />
         </RelativeLayout>
-
-        <TextView
-            android:id="@+id/txtStudio"
-            android:layout_below="@+id/headerTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="List Movie"
-            android:fontFamily="@font/poppinsregular"
-            android:textSize="12dp"
-            />
-
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/tamplateDeskripsi"
-        android:layout_below="@+id/tamplateHeader"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        >
-        <TextView
-            android:id="@+id/txtDeskripsi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Loream"
-            android:fontFamily="@font/poppinsregular"
-            android:textSize="12dp"
-            />
-    </RelativeLayout>
+
 
 </RelativeLayout>

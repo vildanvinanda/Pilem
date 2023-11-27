@@ -5,11 +5,11 @@ import android.os.Parcelable;
 
 public class MovieModel implements Parcelable {
     private int id;
-    private String poster_path, title, release_date, overview, original_language;
+    private String poster_path, title, release_date, overview, original_language, backdrop_path;
     private float vote_average;
 
 
-    public MovieModel(int id, String poster_path, String title, String release_date, String overview, String original_language, float vote_average) {
+    public MovieModel(int id, String poster_path, String title, String release_date, String overview, String original_language, float vote_average, String backdrop_path) {
         this.id = id;
         this.poster_path = poster_path;
         this.title = title;
@@ -17,6 +17,7 @@ public class MovieModel implements Parcelable {
         this.overview = overview;
         this.original_language = original_language;
         this.vote_average = vote_average;
+        this.backdrop_path = backdrop_path;
     }
 
     protected MovieModel(Parcel in) {
@@ -27,6 +28,7 @@ public class MovieModel implements Parcelable {
         overview = in.readString();
         original_language = in.readString();
         vote_average = in.readFloat();
+        backdrop_path = in.readString();
     }
 
     public static final Creator<MovieModel> CREATOR = new Creator<MovieModel>() {
@@ -40,6 +42,10 @@ public class MovieModel implements Parcelable {
             return new MovieModel[size];
         }
     };
+
+    public String getBackdrop_path() {
+        return backdrop_path;
+    }
 
     public int getId() {
         return id;
@@ -84,6 +90,7 @@ public class MovieModel implements Parcelable {
         dest.writeString(overview);
         dest.writeString(original_language);
         dest.writeFloat(vote_average);
+        dest.writeString(backdrop_path);
     }
 
     @Override
@@ -95,7 +102,8 @@ public class MovieModel implements Parcelable {
                 ", release_date='" + release_date + '\'' +
                 ", overview='" + overview + '\'' +
                 ", original_language='" + original_language + '\'' +
-                ", vote_average=" + vote_average +
+                ", vote_average=" + vote_average + '\'' +
+                ", backdrop_path=" + backdrop_path +
                 '}';
     }
 }
